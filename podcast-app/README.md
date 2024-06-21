@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+React application designed to display detailed information about a specific show or episode. Its primary functionality includes rendering show details, allowing users to add episodes to their favorites list, and managing state to ensure a seamless user experience.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Component Overview
+The ShowDetails component utilizes React hooks (useState and useEffect) to manage state and fetch data dynamically. It is structured to handle the following key functionalities:
 
-## Available Scripts
+State Management:
 
-In the project directory, you can run:
+Favorites State: Maintains an array (favorites) using useState, storing episodes that users have marked as favorites.
+Loading State: Manages loading state (loading) to indicate when data is being fetched.
+Error State: Handles errors (error) that may occur during data retrieval.
+Fetching Show Details:
 
-### `npm start`
+Utilizes useEffect to asynchronously fetch show details based on the id parameter obtained from useParams(). This ensures that the component updates whenever the id changes, facilitating dynamic content rendering.
+Displaying Show Details:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Renders show information such as title, season, and show title dynamically based on fetched data.
+Provides a button (Add to Favorites) for users to add the current episode to their favorites list.
+Adding to Favorites:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Implements addToFavorites function to add episodes to the favorites array. This function uses setFavorites to update state and localStorage for persistence across sessions.
+Error Handling:
 
-### `npm test`
+Includes conditional rendering for loading and error states to provide feedback to users during data fetching or in case of errors.
+Persistence:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Uses localStorage to store and retrieve favorites array, ensuring that favorite episodes persist beyond the current session.
+Functionality and Usage
+The ShowDetails component enhances user interaction by:
 
-### `npm run build`
+Providing a clear and structured view of show details.
+Enabling users to mark episodes as favorites with a single click.
+Ensuring seamless integration with localStorage for persistent favorite management.
+Handling loading and error states gracefully to maintain a smooth user experience.
+Conclusion
+The ShowDetails component exemplifies effective state management, dynamic data fetching, and user interaction design in a React application. By leveraging React hooks and local storage, it delivers a responsive and intuitive interface for users to explore, favorite, and manage episodes effortlessly.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Diana Mukhari
+0769441875
+dianamukhari@gmail.com

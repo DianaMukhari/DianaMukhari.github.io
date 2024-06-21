@@ -1,0 +1,44 @@
+/* src/components/ShowList.css */
+
+.show-list-container {
+    margin: 0 20px;
+    padding-bottom: 40px;
+}
+
+.show-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 20px));
+    gap: 5px;
+}
+
+.show-item {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.show-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px 5px 0 0;
+}
+
+.show-item h3 {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.show-item p {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.show-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}

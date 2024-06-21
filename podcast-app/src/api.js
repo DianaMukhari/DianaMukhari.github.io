@@ -1,8 +1,13 @@
 // src/api.js
-import axios from 'axios';
 
 const API_BASE_URL = 'https://podcast-api.netlify.app';
 
-export const fetchPreviews = () => axios.get(`${API_BASE_URL}`);
-export const fetchShow = (id) => axios.get(`${API_BASE_URL}/id/${id}`);
-export const fetchGenre = (id) => axios.get(`${API_BASE_URL}/genre/${id}`);
+export const fetchShows = async () => {
+    const response = await fetch(`${API_BASE_URL}/shows`);
+    return response.json();
+};
+
+export const fetchShowDetails = async (showId) => {
+    const response = await fetch(`${API_BASE_URL}/shows/${showId}`);
+    return response.json();
+};
