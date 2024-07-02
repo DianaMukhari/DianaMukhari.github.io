@@ -37,4 +37,3 @@ The ShowDetails component exemplifies effective state management, dynamic data f
 Diana Mukhari
 0769441875
 dianamukhari@gmail.com
-https/podcastshowapp.netlify.app
