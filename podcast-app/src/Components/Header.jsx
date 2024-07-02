@@ -1,18 +1,24 @@
-// src/components/Header.js
-
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import '../App.css';
 
-const Header = () => {
-    return (
-        <header>
-            <h1>Podcast App</h1>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/favourites">Favourites</Link>
-            </nav>
-        </header>
-    );
+const Header = ({ onFavoritesClick }) => {
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    navigate('/');
+  };
+
+  return (
+    <header className="header">
+      <nav className="nav-links">
+        <class buttons>
+        <button className="favorites-button" onClick={onFavoritesClick}>Favorites</button>
+        <button className="Home-button" onClick={handleHomeClick}>Home</button>      
+        </class>
+        </nav>
+    </header>
+  );
 };
 
 export default Header;

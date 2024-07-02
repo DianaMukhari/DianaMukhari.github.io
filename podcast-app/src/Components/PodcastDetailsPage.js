@@ -84,7 +84,7 @@ const PodcastDetailsPage = ({ addToFavorites }) => {
           <div key={season.id} className="season-card" onClick={() => handleSeasonClick(season)}>
             <img src={season.image} alt={`Season ${season.season}`} />
             <p className="season-number">Season {season.season}</p>
-            <p className="season-number">Episodes {season.episodes.length}</p>
+             <p className="season-number">Episodes {season.episodes.length}</p>
           </div>
         ))}
       </div>
